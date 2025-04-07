@@ -9,7 +9,9 @@ echo -e "\e[1;34mautomatic ctf enumerator uses multiple tools i did not write\e[
 echo ....................................................................  | lolcat
 echo -n -e "\e[1;33mEnter your target url =>\e[0m "
 read url
+read format
 echo targeting $url
+echo confirment format is $format
 pwd=pwd
 echo -e "\e[1;97mFinding basic info...\e[0m"
 
@@ -24,8 +26,9 @@ echo -e "\e[1;33mgrabbing cookies... \e[0m"
 curl -c cookies.txt http://$url >> cookies.txt
 
 grep flag cookies.txt
-grep  cookies.txt
+grep secret cookies.txt
 grep admin cookies.txt
+grep $format cookies.txt
 
 echo -e "\e[1;33mchecking for robots.txt... \e[0m"
 response=$(curl -I -s $url/robots.txt | grep "HTTP/")
@@ -38,7 +41,7 @@ else
 fi
 
 echo -e "\e[1;97mSearching for terms in source \e[0m"
-timeout 20s curl -v $url | grep -e "Zero" -e "pass" -e "zero" -e "flag" -e "clue" -e "secret" -e "challenge" -e "message" -e "hint" -e "admin" | tee -a output.txt
+timeout 20s curl -v $url | grep -e "pass"  -e "flag" -e "clue" -e "secret" -e "challenge" -e "message" -e "hint" -e "admin" -e $format | tee -a output.txt
 
 echo -e "\e[1;97mscanning for sql vulnerabilites...\e[0m"
 
