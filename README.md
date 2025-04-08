@@ -16,5 +16,5 @@ Next it saves cookies to a file and checks for strings (these can be changed). I
 
 It uses sqlmap to check for sql vulnerabilites, gobuster for hidden directories and admin files, sublist3r to check for hidden subdomains, xsstrike for xss attacks and finally saves the output of them all in the file output.txt in the current directory.
 
-Of course this isnt very useful due to the amount of setting up required, but I will automate the process sometime soon. 
+Of course this isnt very useful due to the amount of setting up required, but I will automate the setup process sometime soon. 
 
