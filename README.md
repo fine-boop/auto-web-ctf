@@ -1,4 +1,4 @@
-# auto-web-ctf
+# ezsolve
 Automate the beginning checks of any web ctf challenge 
 
 Now this isnt an overly complicated tools, it is intended purley for timesaving purposes. Currently for it to work you must have these tools installed
