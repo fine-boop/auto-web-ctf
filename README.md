@@ -10,7 +10,7 @@ Now this isnt an overly complicated tool, it is intended purley for timesaving p
 
 As well as some wordlists I will put up later. 
 
-Currently, what this shell script does it, scan the target with nmap, ping, dig and whois for intel. 
+Currently, what this shell script does, is it scans the target with nmap, ping, dig and whois for intel. 
 
 Next it saves cookies to a file and checks for strings (these can be changed). It checks for a robots.txt file, and downloads and parses the source code for strings of intrest. 
 
